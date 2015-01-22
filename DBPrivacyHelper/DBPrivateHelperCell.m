@@ -27,7 +27,7 @@
         self.contentView.backgroundColor = self.backgroundColor;
         self.selectionStyle = UITableViewCellSelectionStyleNone;
         
-        self.textLabel.font = [UIFont systemFontOfSize:10.0];
+        self.textLabel.font = [UIFont systemFontOfSize:12.0];
         self.textLabel.textColor = [UIColor colorWithWhite:1.0 alpha:.75];
         
         _iconView = [[UIImageView alloc] init];
@@ -59,7 +59,7 @@
 - (void) setIcon:(NSString *)icon text:(NSString *)text row:(NSInteger)row {
     _iconView.image = [UIImage imageNamed:icon];
     _cellLabel.text = text;
-    self.textLabel.text = [NSString stringWithFormat:@".%li", (long)row];
+    self.textLabel.text = [NSString stringWithFormat:@"%li.", (long)row];
 }
 
 @end
